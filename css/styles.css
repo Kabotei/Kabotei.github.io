@@ -480,18 +480,67 @@ padding:60px 0;
 	font-size: 58px;
 	color: #5E5E5E;
 }
-.tileBox img{
-overflow:hidden;
-border-radius:120px;
-width:300px;
-box-shadow: 12px 0px 0px 12px rgba(13, 113, 165, 0.2), -12px 0px 0px 12px rgba(109, 139, 232, 0.2);
-}
-.tileBox p { 
+.tileBox img {
+	overflow: hidden;
+	border-radius: 120px;
+	width: 300px;
+	box-shadow: 12px 0px 0px 12px rgba(13, 113, 165, 0.2), -12px 0px 0px 12px rgba(109, 139, 232, 0.2);	
+  }
+  
+  .tileBox p {
 	font-size: 15px;
 	color: #777777;
 	padding: 20px;
 	margin: 0px;
+  }
+
+  .tileBoxProjet img {
+	overflow: hidden;
+	border-radius: 120px;
+	width: 300px;
+	box-shadow: 12px 0px 0px 12px rgba(13, 113, 165, 0.2), -12px 0px 0px 12px rgba(109, 139, 232, 0.2);
+	cursor: zoom-in;
+  }
+  
+  .tileBoxProjet p {
+	font-size: 15px;
+	color: #777777;
+	padding: 20px;
+	margin: 0px;
+  }
+  
+/* Style de la modale */
+.modal {
+	display: none; /* Cache la modale par défaut */
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9); /* Fond semi-transparent */
+	padding-top: 50px; /* Décale un peu la modale vers le bas si nécessaire */
+	overflow: hidden;
+	z-index: 1100;
 }
+  
+  /* Style de l'image dans la modale */
+  .modal-content {
+	display: block;
+	margin: auto;
+	max-width: 90%; /* Largeur de l'image maximale */
+	max-height: 80%; /* Hauteur maximale de l'image */
+	position: relative; /* Nécessaire pour positionner le bouton "X" dessus */
+  }
+  
+  /* Style du texte de la légende (caption) */
+  #caption {
+	text-align: center;
+	color: #ccc;
+	padding: 10px;
+	font-size: 18px;
+  }
+
 /*parlex*/
 .bg-parlex {
 	padding-top: 0px;
@@ -799,7 +848,7 @@ a.current {
 	height: 100%;
 	opacity: 1;
 	transition: all 500ms ease-in-out 0s;
-	top: 5px;
+	top: -20px;
 }
 .portfolio-item .portfolio-desc .folio-info h5 {
 	text-transform: uppercase;
@@ -1161,4 +1210,49 @@ nav#filter li {
 	-ms-user-select: none;
 	user-select: none;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#methodology {
+line-height: 1.6;
+}
+
+#methodology ul {
+list-style-type: disc;
+margin-left: 20px;
+}
+
+#methodology ul ul {
+list-style-type: circle;
+margin-left: 40px;
+}
+
+#methodology ul ul ul {
+list-style-type: square;
+margin-left: 60px;
+}
+
+.card {
+border-radius: 15px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+transform: scale(1.05);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+font-size: 1.3rem;
+font-weight: bold;
+color: #333;
+margin-bottom: 1rem;
+}
+
+.card ul li {
+font-size: 1rem;
+margin-bottom: 0.5rem;
+}
+
+.card i {
+color: #6c757d; /* Icônes grises */
 }

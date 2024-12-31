@@ -149,3 +149,33 @@ $('document').ready(function () {
 			  $('#filter .current').trigger('click');
 		});
 });
+
+// Récupérer la modale, l'image et le bouton de fermeture
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+var span = document.getElementsByClassName("close")[0];
+
+// Récupérer toutes les images avec la classe 'image-zoom'
+var images = document.querySelectorAll(".image-zoom");
+
+// Ajouter un gestionnaire de clic à chaque image
+images.forEach(function(img) {
+  img.onclick = function() {
+    modal.style.display = "block"; // Afficher la modale
+    modalImg.src = this.src; // Mettre l'image cliquée dans la modale
+    captionText.innerHTML = this.alt; // Mettre la description de l'image dans la modale
+  }
+});
+
+// Lorsque l'utilisateur clique sur "x", fermer la modale
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Lorsque l'utilisateur clique en dehors de l'image, fermer la modale
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
