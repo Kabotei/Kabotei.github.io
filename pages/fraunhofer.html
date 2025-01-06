@@ -1,0 +1,285 @@
+<!doctype html>
+<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-gb" class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--[if lt IE 9]> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+<title>Léo BACKERT</title>
+<meta name="description" content="">
+<meta name="author" content="LB">
+<!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<!--[if lte IE 8]>
+		<script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
+	<![endif]-->
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/isotope.css" media="screen" />
+<link rel="stylesheet" href="../js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../css/da-slider.css" />
+<link rel="stylesheet" href="../css/styles.css" />
+<!-- Font Awesome -->
+<link href="../css/font-awesome.min.css" rel="stylesheet">
+
+<!-- bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+<header class="header">
+  <div class="container">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <button class="btn btn-outline-secondary" onclick="history.back()" title="Retour à la page précédente">
+          <i class="bi bi-arrow-left"></i> Retour
+        </button>
+        </div>
+      <!--/.navbar-header-->
+      <div id="main-nav" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav" id="mainNav">
+          <li class="active"><a href="#home" class="scroll-link">Titre</a></li>
+          <li><a href="#context" class="scroll-link">Contexte</a></li>
+          <li><a href="#subject" class="scroll-link">Sujet</a></li>
+          <li><a href="#methodology" class="scroll-link">Méthodologie</a></li>
+          <li><a href="#results" class="scroll-link">Résultats</a></li>
+          <li><a href="#tech" class="scroll-link">Technologies</a></li>
+          <li><a href="#contactUs" class="scroll-link">Contact</a></li>
+        </ul>
+      </div>
+      <!--/.navbar-collapse--> 
+    </nav>
+    <!--/.navbar--> 
+  </div>
+  <!--/.container--> 
+</header>
+<!--/.header-->
+<div id="#top"></div>
+<section id="home">
+  <div class="banner-container"> <img src="../images/background_home_page.png" alt="banner" />
+    <div class="container banner-content"> 
+            <div class="row">
+                <header class="centered">
+                    <p>Identification optique de composants électroniques défectueux</p>
+                </header>
+  </div>
+</section>
+
+<!--Context-->
+<section id="context" class="secPad white">
+  <div class="container">
+    <div class="heading "> 
+      <!-- Heading -->
+      <h2>Contexte général</h2>
+      <p>  Le projet développe un système de mesure de défauts semi-conducteurs utilisant 
+        la photoluminescence pour une inspection optique et non-destructive. Il détecte les défauts 
+        électriquement actifs et les marque dans des images infrarouges. L'amélioration de la métrologie par 
+        l'apprentissage automatique est l'objectif du stage, visant à identifier les causes profondes des 
+        défauts et à déterminer s'ils peuvent devenir des "défauts tueurs" pouvant affecter gravement les 
+        performances des dispositifs.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!--Sujet-->
+<section id="subject" class="secPad white">
+  <div class="container">
+    <div class="heading "> 
+      <!-- Heading -->
+      <h2>Sujet du projet</h2>
+      <p> Le projet visait à développer une IA pour classer les wafers électroniques défectueux, améliorant ainsi la fabrication des semi-conducteurs. 
+      </p>
+    </div>
+  </div>
+</section>
+
+<!--Methodology-->
+<section id="methodology" class="secPad white">
+  <div class="container">
+    <div class="heading "> 
+      <!-- Heading -->
+      <h2>Travail réalisé</h2>
+      <ul>
+        <li><strong>Formation.</strong>
+          <ul>
+            <li>Acquérir une compréhension approfondie du procédé de fabrication des wafers.</li>
+            <li> Maîtriser l'environnement de développement et les procédés de fabrication des semi-conducteurs.</li>
+          </ul>
+        </li>
+        <br/>
+        <li><strong>Mise en place de l'environnement de travail.</strong>
+          <ul>
+            <li>Configuration d'un environnement Python (Azure ML puis Anaconda).</li>
+          </ul>
+        </li>
+        <br/>
+        <li><strong>Développer un réseau neuronal convolutif pour classifier les images de wafers.</strong>
+          <ul>
+            <li>Choix du format des images (PNG vs FITS).</li>
+            <li>Pré-traitement des images.</li>
+            <li>Écriture du réseau neuronal.</li>
+            <li>Entraînement du modèle.</li>
+          </ul>
+        </li>
+        <br/>
+        <li><strong>Rapport et résultats.</strong>
+          <ul>
+            <li>Compiler les résultats obtenus.</li>
+            <li>Documenter le travail réalisé pour assurer sa compréhension et reproductibilité.</li>
+            <li>Analyser les performances des modèles développés.</li>
+            <li>Présenter les conclusions et les recommandations.</li>
+            <li>Présenter le travail accompli devant l'équipe et le client.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!--Résultats-->
+<section id="results" class="secPad">
+  <div class="container">
+    <div class="heading "> 
+      <!-- Heading -->
+      <h2>Résultats obtenus</h2>
+      <ul>
+        <li><strong>Le réseau de neurones a obtenu un rappel de 70% et une précision de 100% sur les données de test.</strong>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!--Techno-->
+<section id="tech" class="secPad">
+  <div class="container">
+    <div class="heading "> 
+  <h2>Technologies utilisées</h2>
+    <div class="row">
+      <!-- Carte Techno -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card text-center border-0 shadow">
+          <div class="card-body">
+            <h5 class="card-title">Technologies</h5>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-graph-up"></i> Machine Learning</li>
+              <li><i class="bi bi-grid-3x3-gap-fill"></i> CNN</li>
+              <li><i class="bi bi-eye-fill"></i> Vision par ordinateur</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Carte Langages -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card text-center border-0 shadow">
+          <div class="card-body">
+            <h5 class="card-title">Langages</h5>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-code-slash me-2"></i> TensorFlow</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Carte Logiciels -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card text-center border-0 shadow">
+          <div class="card-body">
+            <h5 class="card-title">Systèmes</h5>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-circle-fill" style="color: green;"></i> Anaconda</li>
+              <li><img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Azure ML" width="24" height="24">
+                Azure ML</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Carte Méthodes -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card text-center border-0 shadow">
+          <div class="card-body">
+            <h5 class="card-title">Méthodes</h5>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-bar-chart"></i> Analyse Data</li>
+              <li><i class="bi bi-arrow-repeat"></i> Agile</li>
+              <li><i class="bi bi-image"></i> Traitement d'images</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<!--Contact -->
+<section id="contactUs" class="page-section secPad">
+  <div class="container">
+    <div class="row">
+      <div class="heading"> 
+        <!-- Heading -->
+        <h2>Restons en contact !</h2>
+        <p>Merci d'avoir consulté mon profil. Si vous souhaitez me joindre, vous pouvez utiliser les coordonnées ci-dessous.</p>
+      </div>
+    </div>
+    <div class="row mrgn30">
+      <div class="col-md-4">
+        <h4>Adresse:</h4>
+        <address>
+        Léo BACKERT<br>
+        6 Chemin des Aulnes<br>
+        67120 Dorlisheim, France<br>
+        </address>
+      </div>
+      <div class="col-md-4">
+        <h4>Email:</h4>
+        <address>
+        leo.backert.ei@gmail.com<br>
+        </address>
+      </div>
+      <div class="col-md-4">
+        <h4>Portable:</h4>
+        <address>
+        +33 (0)6 95 94 51 00<br>
+        </address>
+      </div>
+    </div>
+  </div>
+  <!--/.container--> 
+</section>
+
+<!--/.page-section-->
+<footer class="copyright">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="social pull-left"> <a href="https://www.linkedin.com/"><i class="fa fa-linkedin-square"></i></a><a href="#"><i class="fa fa-github"></i></a> </div>
+      </div>
+      <div class="col-md-6"> <span class="pull-right"> &copy 2024 Léo Backert | All Rights Reserved  -- Template by <a href="http://webThemez.com">WebThemez.com</a></span> </div>
+    </div>
+    <!-- / .row --> 
+  </div>
+</footer>
+<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a> 
+
+<!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]--> 
+<script src="../js/modernizr-latest.js"></script> 
+<script src="../js/jquery-1.8.2.min.js" type="text/javascript"></script> 
+<script src="../js/bootstrap.min.js" type="text/javascript"></script> 
+<script src="../js/jquery.isotope.min.js" type="text/javascript"></script> 
+<script src="../js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script> 
+<script src="../js/jquery.nav.js" type="text/javascript"></script> 
+<script src="../js/jquery.cslider.js" type="text/javascript"></script> 
+<script src="../js/jquery.diagram.js"></script> 
+<script src="../js/custom.js" type="text/javascript"></script> 
+<script src="../js/owl-carousel/owl.carousel.js"></script>
+</body>
+</html>
