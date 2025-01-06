@@ -1256,3 +1256,15 @@ margin-bottom: 0.5rem;
 .card i {
 color: #6c757d; /* Icônes grises */
 }
+
+.btn-outline-secondary {
+border: 2px solid #6c757d;
+color: #6c757d;
+border-radius: 20px;
+transition: all 0.3s ease;
+}
+  
+.btn-outline-secondary:hover {
+background-color: #6c757d;
+color: white;
+}
