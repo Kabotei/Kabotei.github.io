@@ -1,0 +1,261 @@
+<!doctype html>
+<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-gb" class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--[if lt IE 9]> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+<title>Léo BACKERT</title>
+<meta name="description" content="">
+<meta name="author" content="LB">
+<!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<!--[if lte IE 8]>
+		<script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
+	<![endif]-->
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/isotope.css" media="screen" />
+<link rel="stylesheet" href="../js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../css/da-slider.css" />
+<link rel="stylesheet" href="../css/styles.css" />
+<!-- Font Awesome -->
+<link href="../css/font-awesome.min.css" rel="stylesheet">
+
+<!-- bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+<header class="header">
+  <div class="container">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <button class="btn btn-outline-secondary" onclick="history.back()" title="Retour à la page précédente">
+          <i class="bi bi-arrow-left"></i> Retour
+        </button>
+        </div>
+      <!--/.navbar-header-->
+      <div id="main-nav" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav" id="mainNav">
+          <li class="active"><a href="#home" class="scroll-link">Titre</a></li>
+          <li><a href="#summary" class="scroll-link">Résumé</a></li>
+          <li><a href="#explain" class="scroll-link">Explication</a></li>
+          <li><a href="#code" class="scroll-link">Implémentation</a></li>
+          <li><a href="#plus" class="scroll-link">En savoir plus</a></li>
+        </ul>
+      </div>
+      <!--/.navbar-collapse--> 
+    </nav>
+    <!--/.navbar--> 
+  </div>
+  <!--/.container--> 
+</header>
+<!--/.header-->
+<div id="#top"></div>
+<section id="home">
+  <div class="banner-container"> <img src="../images/background_home_page.png" alt="banner" />
+    <div class="container banner-content"> 
+            <div class="row">
+                <header class="centered">
+                  <h1>Présentation d'article</h1>
+                  <p>Prototypical Networks for Few-shot Learning</p>
+
+                  <a href="../pdf/FewShot.pdf" class="hireMe">Article</a>
+                </header>
+  </div>
+</section>
+
+<!--Résumé-->
+<section id="summary" class="secPad white">
+  <div class="container">
+    <div class="heading "> 
+      <!-- Heading -->
+      <h2>Résumé de l'article</h2>
+      <p> Cet article introduit les Prototypical Networks, une approche simple et efficace pour le few-shot learning, un domaine qui vise à apprendre de nouvelles classes à partir d’un très petit nombre d’exemples. L’idée clé est de représenter chaque classe par un prototype, calculé comme la moyenne des représentations (ou embeddings) des exemples de cette classe dans un espace vectoriel.</p>
+      <p> Lorsqu’un nouvel exemple est présenté, il est classé en fonction de la proximité de son embedding avec les prototypes des classes existantes, en utilisant une distance métrique (comme la distance euclidienne).</p>
+      <p> 
+        Les points forts de cette méthode incluent :
+        <ul>
+          <li><strong>Une architecture légère</strong> qui permet une généralisation rapide vers de nouvelles classes, sans nécessiter d’entraînement supplémentaire.</li>
+          <br/>
+          <li><strong>Des performances compétitives,</strong> voire supérieures, sur des benchmarks bien connus comme Omniglot et mini-ImageNet.</li>
+          <br/>
+          <li><strong>Une approche intuitive,</strong> basée sur des distances métriques, qui simplifie l’ajout de nouvelles classes à l’ensemble des connaissances du modèle.</li>
+        </ul>
+      </p>
+      <br>
+      <p>Cette méthode constitue une avancée importante dans le domaine de l’apprentissage par transfert et des systèmes adaptatifs, avec des applications potentielles dans la reconnaissance d’images, la bioinformatique et d’autres domaines nécessitant une adaptation rapide avec peu de données.</p>
+    </div>
+  </div>
+</section>
+
+<!--Explication-->
+<section id="explain" class="secPad white">
+  <div class="container">
+    <div class="heading "> 
+      <!-- Heading -->
+      <h2>Explication simplifiée</h2>
+      <p> L'apprentissage classique repose souvent sur des ensembles de données volumineux pour former des modèles capables de bien généraliser. Cependant, dans des contextes où peu d'exemples par classe sont disponibles (few-shot learning), cette approche est insuffisante. Les Prototypical Networks se distinguent en exploitant une manière intuitive et efficace d'apprendre à partir de peu d'exemples.</p>
+      <p>
+        <strong>Imaginez la situation suivante :</strong><br>
+        Vous devez reconnaître à quelle famille appartient une personne en regardant son visage, mais vous ne disposez que de quelques photos par famille. Comment procéderiez-vous ? Une stratégie serait de regarder les photos existantes, d'en extraire des caractéristiques essentielles (par exemple, la forme du visage, la couleur des yeux, etc.), et de créer une "moyenne mentale" pour chaque famille. Ensuite, en voyant un nouveau visage, vous comparez ses caractéristiques à celles des "moyennes" que vous avez en tête.
+      </p>
+      <p>
+        Les Prototypical Networks font exactement cela avec les données :
+        <ol>
+          <li>
+            <strong>Extraction des caractéristiques</strong>
+            <br>
+            Les données brutes (comme des images) sont d'abord transformées en représentations numériques (ou embeddings) grâce à un réseau de neurones convolutionnel. Ces représentations capturent les informations essentielles de chaque exemple.
+          </li>
+            <br>
+            <li>
+            <strong>Création des prototypes</strong>
+            <br>
+            Pour chaque classe (par exemple, "chien", "chat", "oiseau"), les Prototypical Networks calculent un prototype. Ce prototype est simplement la moyenne des embeddings des exemples disponibles pour cette classe. Il représente un résumé compact et efficace de la classe.
+          </li>
+            <br>
+            <li>
+            <strong>Classification des nouveaux exemples</strong>
+            <br>
+            Lorsqu'un nouvel exemple (appelé query) est présenté, son embedding est comparé aux prototypes de chaque classe. La distance entre l'embedding du query et chaque prototype est calculée (généralement avec la distance euclidienne). Le query est alors classé dans la catégorie dont le prototype est le plus proche.
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        <strong>Pourquoi cette méthode est-elle efficace ?</strong>
+        <br>
+        <ul>
+          <li><strong>Simplicité</strong> : Une fois le modèle entraîné, il n'est pas nécessaire de réentraîner le réseau pour ajouter de nouvelles classes. Il suffit de calculer le prototype des nouvelles classes en utilisant leurs exemples.</li>
+            <br>
+            <li><strong>Généralisation</strong> : En se basant sur des distances métriques, le modèle apprend à généraliser mieux, même avec peu de données.</li>
+            <br>
+            <li><strong>Efficacité</strong> : La classification est rapide et nécessite peu de calculs.</li>
+            <br>
+          </ul>
+      </p>
+      <p>
+        <strong>Exemple dans la vie réelle :</strong>
+        <br>
+        <br>
+        Supposons que vous développez une application capable de reconnaître différentes espèces de papillons. Vous montrez à l’application quelques photos pour chaque espèce : deux photos de monarques, deux photos de papillons machaons et deux photos de papillons belle-dame.
+        <br>
+        <br>
+        L’application utilise ces images pour créer des "prototypes" numériques pour chaque espèce. Ces prototypes représentent une moyenne des caractéristiques visuelles importantes (forme des ailes, couleurs, motifs, etc.).
+        <br>
+        <br>
+        Lorsque vous prenez une nouvelle photo d’un papillon, l’application compare ses caractéristiques à celles des prototypes. Si les caractéristiques de la nouvelle photo se rapprochent davantage du prototype des monarques, alors l'application le classifie comme un papillon monarque.
+        <br>
+        <br>
+        Cette méthode fonctionne même si vous ajoutez une nouvelle espèce de papillon, comme le papillon bleu morpho. Il suffit d’ajouter quelques photos de ce papillon, et l’application pourra créer un prototype pour cette nouvelle classe, sans réentraîner le modèle entier.
+        <br>
+        <br>
+        Cette méthode est particulièrement adaptée aux cas où :
+        <ul>
+          <li>Vous devez travailler avec des classes rares ou de nouvelles catégories (par exemple, reconnaître une nouvelle espèce animale).</li>
+          <li>Vous n'avez pas assez de données pour entraîner un modèle traditionnel.</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!--Implémentation-->
+<section id="code" class="secPad white">
+  <div class="container">
+    <div class="heading "> 
+      <!-- Heading -->
+      <h2>Implémentation</h2>
+      <iframe src="html\protNetwFewShot.html" title="description" class="pnfs"></iframe>
+    </div>
+  </div>
+</section>
+
+<!--Plus-->
+<section id="plus" class="secPad white">
+  <div class="container">
+    <div class="heading "> 
+      <!-- Heading -->
+      <h2>En savoir plus</h2>
+      <ul>
+        <li><a href="https://arxiv.org/abs/1703.05175">Article original sur ArXiv</a></li>
+        <!-- <li><a href="https://arxiv.org/abs/1703.05175">Code implémenté en PyTorch</a></li> -->
+      </ul>
+      
+    </div>
+  </div>
+</section>
+
+<!--Contact -->
+<section id="contactUs" class="page-section secPad">
+  <div class="container">
+    <div class="row">
+      <div class="heading"> 
+        <!-- Heading -->
+        <h2>Restons en contact !</h2>
+        <p>Merci d'avoir consulté mon profil. Si vous souhaitez me joindre, vous pouvez utiliser les coordonnées ci-dessous.</p>
+      </div>
+    </div>
+    <div class="row mrgn30">
+      <div class="col-md-4">
+        <h4>Adresse:</h4>
+        <address>
+        Léo BACKERT<br>
+        6 Chemin des Aulnes<br>
+        67120 Dorlisheim, France<br>
+        </address>
+      </div>
+      <div class="col-md-4">
+        <h4>Email:</h4>
+        <address>
+        leo.backert.ei@gmail.com<br>
+        </address>
+      </div>
+      <div class="col-md-4">
+        <h4>Portable:</h4>
+        <address>
+        +33 (0)6 95 94 51 00<br>
+        </address>
+      </div>
+    </div>
+  </div>
+  <!--/.container--> 
+</section>
+
+<!--/.page-section-->
+<footer class="copyright">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="social pull-left"> <a href="https://www.linkedin.com/"><i class="fa fa-linkedin-square"></i></a><a href="#"><i class="fa fa-github"></i></a> </div>
+      </div>
+      <div class="col-md-6"> <span class="pull-right"> &copy 2024 Léo Backert | All Rights Reserved  -- Template by <a href="http://webThemez.com">WebThemez.com</a></span> </div>
+    </div>
+    <!-- / .row --> 
+  </div>
+</footer>
+<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a> 
+
+<!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]--> 
+<script src="../js/modernizr-latest.js"></script> 
+<script src="../js/jquery-1.8.2.min.js" type="text/javascript"></script> 
+<script src="../js/bootstrap.min.js" type="text/javascript"></script> 
+<script src="../js/jquery.isotope.min.js" type="text/javascript"></script> 
+<script src="../js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script> 
+<script src="../js/jquery.nav.js" type="text/javascript"></script> 
+<script src="../js/jquery.cslider.js" type="text/javascript"></script> 
+<script src="../js/jquery.diagram.js"></script> 
+<script src="../js/custom.js" type="text/javascript"></script> 
+<script src="../js/owl-carousel/owl.carousel.js"></script>
+</body>
+</html>
