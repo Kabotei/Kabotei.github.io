@@ -1,0 +1,251 @@
+<!doctype html>
+<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-gb" class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--[if lt IE 9]> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+<title>Léo BACKERT</title>
+<meta name="description" content="">
+<meta name="author" content="LB">
+<!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<!--[if lte IE 8]>
+		<script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
+	<![endif]-->
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/isotope.css" media="screen" />
+<link rel="stylesheet" href="../js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../css/da-slider.css" />
+<link rel="stylesheet" href="../css/styles.css" />
+<!-- Font Awesome -->
+<link href="../css/font-awesome.min.css" rel="stylesheet">
+
+<!-- bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+<header class="header">
+  <div class="container">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <button class="btn btn-outline-secondary" onclick="history.back()" title="Retour à la page précédente">
+          <i class="bi bi-arrow-left"></i> Retour
+        </button>
+        </div>
+      <!--/.navbar-header-->
+      <div id="main-nav" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav" id="mainNav">
+          <li class="active"><a href="#home" class="scroll-link">Titre</a></li>
+          <li><a href="#summary" class="scroll-link">Résumé</a></li>
+          <li><a href="#explain" class="scroll-link">Explication</a></li>
+          <li><a href="#code" class="scroll-link">Implémentation</a></li>
+          <li><a href="#plus" class="scroll-link">En savoir plus</a></li>
+        </ul>
+      </div>
+      <!--/.navbar-collapse--> 
+    </nav>
+    <!--/.navbar--> 
+  </div>
+  <!--/.container--> 
+</header>
+<!--/.header-->
+<div id="#top"></div>
+<section id="home">
+  <div class="banner-container"> <img src="../images/background_home_page.png" alt="banner" />
+    <div class="container banner-content"> 
+            <div class="row">
+                <header class="centered">
+                  <h1>Présentation d'article</h1>
+                  <p>Image Style Transfer Using Convolutional Neural Networks</p>
+
+                  <a href="../pdf/Image_Style_Transfer.pdf" class="hireMe">Article</a>
+                </header>
+  </div>
+</section>
+
+<!--Résumé-->
+<section id="summary" class="secPad white">
+  <div class="container">
+    <div class="heading "> 
+      <!-- Heading -->
+      <h2>Résumé de l'article</h2>
+      <p> Cet article propose une méthode innovante pour mélanger le contenu d’une image (ex. une photo) avec le style artistique d’une autre (ex. une peinture). En utilisant des réseaux de neurones convolutifs (CNN), les auteurs extraient :</p>
+      <p>
+        <ul>
+          <li><strong>Le contenu :</strong> Une photo est analysée pour comprendre sa structure (formes, objets, etc.).</li>
+          <br/>
+          <li><strong>Le style :</strong> Une peinture est étudiée pour identifier son style (couleurs, textures, motifs).</li>
+        </ul>
+      </p>
+      <p>
+        Une image générée est créée en combinant ces deux éléments via une optimisation. Cette technique ouvre des perspectives dans l’art numérique, les jeux vidéo et le design.
+      </p>
+      <p>
+        Les limites incluent un temps de calcul élevé et une résolution restreinte, mais cette méthode marque un grand pas dans l’utilisation des CNN pour des applications artistiques.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!--Explication-->
+<section id="explain" class="secPad white">
+  <div class="container">
+    <div class="heading "> 
+      <!-- Heading -->
+      <h2>Explication simplifiée</h2>
+      <p> Le transfert de style d'image permet de combiner le contenu d'une image (par exemple, une photo) avec le style artistique d'une autre (comme une peinture). Imaginez que vous prenez une photo de paysage et que vous souhaitez la transformer pour qu'elle ressemble à une peinture de Van Gogh. Comment cela fonctionne-t-il ?</p>
+      <br>
+      <p>
+        <strong>Étape 1 : Séparer le contenu et le style</strong><br>
+        Les réseaux de neurones convolutifs (CNN) sont capables de distinguer deux éléments clés d'une image :
+        <ul>
+          <li><strong>Le contenu</strong> : Ce sont les objets, formes et structures, comme une montagne, un arbre ou une maison.</li>
+          <li><strong>Le style</strong> : Ce sont les textures, couleurs et motifs, comme les coups de pinceau de Van Gogh ou les tons pastel d'une peinture impressionniste.</li>
+        </ul>
+        <br>
+        Les couches profondes du réseau capturent ces informations. Les couches intermédiaires identifient le contenu, tandis que les couches plus basses extraient les caractéristiques stylistiques (textures et couleurs).
+        <br><br>
+      </p>
+
+      <p>
+        <strong>Étape 2 : Mélanger contenu et style</strong><br>
+        Pour créer une nouvelle image :
+        <ol>
+          <li>On commence par une image blanche aléatoire.</li>
+          <li>Cette image est modifiée progressivement pour ressembler au contenu de l'image source tout en adoptant le style de l'image artistique.</li>
+          <li>Le processus utilise une méthode d'optimisation : on ajuste les pixels pour réduire la différence entre le contenu et le style attendus.</li>
+        </ol>
+        <br><br>
+      </p>
+
+      <p>
+        <strong>Exemple dans la vie réelle</strong><br>
+        Prenons l'exemple d'une photo d'un chat et d'une peinture de Monet :
+        <ul>
+          <li><strong>Le contenu :</strong> Le chat garde sa forme, ses yeux et ses oreilles.</li>
+          <li><strong>Le style :</strong> Les couleurs pastel et les textures fluides de Monet recouvrent le chat.
+          <li><strong>Resultat :</strong> Une image qui ressemble à un chat peint par Monet !
+        </ul>
+        <br>
+
+      <p>
+        <strong>Pourquoi est-ce puissant ?</strong>
+        <br>
+        <ol>
+          <li><strong>Créativité illimitée </strong> : Vous pouvez mélanger n'importe quel contenu avec n'importe quel style.</li>
+            <br>
+            <li><strong>Applications variées</strong> : Cela peut être utilisé dans l'art, le design, les jeux vidéo, ou même pour explorer de nouveaux concepts visuels.</li>
+            <br>
+            <li><strong>Accessibilité </strong> : Une fois le réseau pré-entraîné (comme VGG-19), tout se fait par optimisation.</li>
+            <br>
+          </ol>
+      </p>
+      <p>
+        <strong>En résumé</strong>
+        <br>
+        Le transfert de style est une technique qui utilise les réseaux neuronaux pour extraire et recombiner le contenu et le style des images. Cela permet de créer des œuvres numériques uniques en unissant structure et esthétique, ouvrant ainsi un champ immense de possibilités dans l'art et la technologie.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!--Implémentation-->
+<section id="code" class="secPad white">
+  <div class="container">
+    <div class="heading "> 
+      <!-- Heading -->
+      <h2>Implémentation</h2>
+      <iframe src="" title="description" class="pnfs"></iframe>
+    </div>
+  </div>
+</section>
+
+<!--Plus-->
+<section id="plus" class="secPad white">
+  <div class="container">
+    <div class="heading "> 
+      <!-- Heading -->
+      <h2>En savoir plus</h2>
+      <ul>
+        <li><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf">Article original sur CVPR</a></li>
+        <!-- <li><a href="https://arxiv.org/abs/1703.05175">Code implémenté en PyTorch</a></li> -->
+      </ul>
+      
+    </div>
+  </div>
+</section>
+
+<!--Contact -->
+<section id="contactUs" class="page-section secPad">
+  <div class="container">
+    <div class="row">
+      <div class="heading"> 
+        <!-- Heading -->
+        <h2>Restons en contact !</h2>
+        <p>Merci d'avoir consulté mon profil. Si vous souhaitez me joindre, vous pouvez utiliser les coordonnées ci-dessous.</p>
+      </div>
+    </div>
+    <div class="row mrgn30">
+      <div class="col-md-4">
+        <h4>Adresse:</h4>
+        <address>
+        Léo BACKERT<br>
+        6 Chemin des Aulnes<br>
+        67120 Dorlisheim, France<br>
+        </address>
+      </div>
+      <div class="col-md-4">
+        <h4>Email:</h4>
+        <address>
+        leo.backert.ei@gmail.com<br>
+        </address>
+      </div>
+      <div class="col-md-4">
+        <h4>Portable:</h4>
+        <address>
+        +33 (0)6 95 94 51 00<br>
+        </address>
+      </div>
+    </div>
+  </div>
+  <!--/.container--> 
+</section>
+
+<!--/.page-section-->
+<footer class="copyright">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="social pull-left"> <a href="https://www.linkedin.com/"><i class="fa fa-linkedin-square"></i></a><a href="#"><i class="fa fa-github"></i></a> </div>
+      </div>
+      <div class="col-md-6"> <span class="pull-right"> &copy 2024 Léo Backert | All Rights Reserved  -- Template by <a href="http://webThemez.com">WebThemez.com</a></span> </div>
+    </div>
+    <!-- / .row --> 
+  </div>
+</footer>
+<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a> 
+
+<!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]--> 
+<script src="../js/modernizr-latest.js"></script> 
+<script src="../js/jquery-1.8.2.min.js" type="text/javascript"></script> 
+<script src="../js/bootstrap.min.js" type="text/javascript"></script> 
+<script src="../js/jquery.isotope.min.js" type="text/javascript"></script> 
+<script src="../js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script> 
+<script src="../js/jquery.nav.js" type="text/javascript"></script> 
+<script src="../js/jquery.cslider.js" type="text/javascript"></script> 
+<script src="../js/jquery.diagram.js"></script> 
+<script src="../js/custom.js" type="text/javascript"></script> 
+<script src="../js/owl-carousel/owl.carousel.js"></script>
+</body>
+</html>
